@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Wrapper from "./components/Wrapper";
+import Screen from "./components/Screen";
+import ButtonBox from "./components/ButtonBox";
+import Backgroundd from "./components/backgroundd";
 
-function App() {
+const App = () => {
+  const [calc, setCalc] = useState({
+    sign: "",
+    num: 0,
+    res: 0,
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Backgroundd>
+      <Wrapper>
+        <Screen value={calc.num ? calc.num : calc.res} />
+        <ButtonBox calc={calc} setClc={setCalc}>
+          
+        </ButtonBox>
+      </Wrapper>
+    </Backgroundd>
   );
-}
+};
 
 export default App;

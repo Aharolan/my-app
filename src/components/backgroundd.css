@@ -1,0 +1,8 @@
+.backgroundd {
+  width: 360px;
+  height: 563px;
+  padding: 20px;
+  border-radius: 1px;
+  background-color: blue;
+  background-image: linear-gradient(blue, #0a97bd);
+}

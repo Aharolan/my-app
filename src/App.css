@@ -4,7 +4,7 @@
 
 .App-logo {
   height: 40vmin;
-  pointer-events: none;
+  pointer-events: visiblePainted;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -26,6 +26,7 @@
 
 .App-link {
   color: #61dafb;
+  pointer-events: stroke;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +36,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.App-calulate {
+  
 }
